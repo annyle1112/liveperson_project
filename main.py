@@ -8,7 +8,8 @@ load_dotenv()
 
 BEARER_TOKEN = os.getenv("BEARER_TOKEN")
 if BEARER_TOKEN is None:
-    exit()
+    print("Missing token")
+    exit(1)
 
 
 def search_twitter(query, tweet_fields, bearer_token=BEARER_TOKEN):
